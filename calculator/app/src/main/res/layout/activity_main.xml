@@ -69,7 +69,7 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:layout_width="wrap_content"
-            android:layout_height="80dp"
+            android:height="80dp"
             android:id="@+id/btnAC"
             android:text="AC"
             android:textSize="30sp"
@@ -81,7 +81,7 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:layout_width="wrap_content"
-            android:layout_height="80dp"
+            android:height="80dp"
             android:id="@+id/btnDel"
             android:text="Del"
             android:textSize="30sp"
@@ -93,7 +93,7 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:layout_width="wrap_content"
-            android:layout_height="80dp"
+            android:height="80dp"
             android:id="@+id/btnDivide"
             android:text="/"
             android:textSize="30sp"
@@ -104,7 +104,7 @@
             android:layout_columnWeight="1"/>
         <androidx.appcompat.widget.AppCompatButton
             android:layout_width="wrap_content"
-            android:layout_height="80dp"
+            android:height="80dp"
             android:id="@+id/btnMulti"
             android:text="*"
             android:textSize="30sp"
@@ -116,7 +116,7 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:layout_width="wrap_content"
-            android:layout_height="80dp"
+            android:height="80dp"
             android:id="@+id/btnMinus"
             android:text="-"
             android:textSize="30sp"
@@ -129,7 +129,7 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:layout_width="wrap_content"
-            android:layout_height="80dp"
+            android:height="80dp"
             android:id="@+id/btn7"
             android:text="7"
             android:textSize="30sp"
@@ -141,7 +141,7 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:layout_width="wrap_content"
-            android:layout_height="80dp"
+            android:height="80dp"
             android:id="@+id/btn8"
             android:text="8"
             android:textSize="30sp"
@@ -153,7 +153,7 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:layout_width="wrap_content"
-            android:layout_height="80dp"
+            android:height="80dp"
             android:id="@+id/btn9"
             android:text="9"
             android:textSize="30sp"
@@ -165,7 +165,7 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:layout_width="wrap_content"
-            android:layout_height="80dp"
+            android:height="80dp"
             android:id="@+id/btnPlus"
             android:text="+"
             android:textSize="30sp"
@@ -178,7 +178,7 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:layout_width="wrap_content"
-            android:layout_height="80dp"
+            android:height="80dp"
             android:id="@+id/btn4"
             android:text="4"
             android:textSize="30sp"
@@ -190,7 +190,7 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:layout_width="wrap_content"
-            android:layout_height="80dp"
+            android:height="80dp"
             android:id="@+id/btn5"
             android:text="5"
             android:textSize="30sp"
@@ -202,7 +202,7 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:layout_width="wrap_content"
-            android:layout_height="80dp"
+            android:height="80dp"
             android:id="@+id/btn6"
             android:text="6"
             android:textSize="30sp"
@@ -215,7 +215,7 @@
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btnEual"
             android:layout_width="wrap_content"
-            android:layout_height="161dp"
+            android:height="161dp"
             android:layout_row="3"
             android:layout_rowSpan="2"
             android:layout_column="3"
@@ -228,7 +228,7 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:layout_width="wrap_content"
-            android:layout_height="80dp"
+            android:height="80dp"
             android:id="@+id/btn1"
             android:text="1"
             android:textSize="30sp"
@@ -240,7 +240,7 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:layout_width="wrap_content"
-            android:layout_height="80dp"
+            android:height="80dp"
             android:id="@+id/btn2"
             android:text="2"
             android:textSize="30sp"
@@ -252,7 +252,7 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:layout_width="wrap_content"
-            android:layout_height="80dp"
+            android:height="80dp"
             android:id="@+id/btn3"
             android:text="3"
             android:textSize="30sp"
@@ -264,7 +264,7 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:layout_width="wrap_content"
-            android:layout_height="80dp"
+            android:height="80dp"
             android:id="@+id/btn0"
             android:text="0"
             android:textSize="30sp"
@@ -277,7 +277,7 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:layout_width="wrap_content"
-            android:layout_height="80dp"
+            android:height="80dp"
             android:id="@+id/btn."
             android:text="."
             android:textSize="30sp"

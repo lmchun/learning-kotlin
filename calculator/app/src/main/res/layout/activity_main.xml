@@ -213,7 +213,7 @@
             android:layout_columnWeight="1"/>
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btnEual"
+            android:id="@+id/btnEquals"
             android:layout_width="wrap_content"
             android:height="161dp"
             android:layout_row="3"
@@ -278,7 +278,7 @@
         <androidx.appcompat.widget.AppCompatButton
             android:layout_width="wrap_content"
             android:height="80dp"
-            android:id="@+id/btn."
+            android:id="@+id/btnDot"
             android:text="."
             android:textSize="30sp"
             android:textColor="@color/text_color"

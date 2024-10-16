@@ -22,6 +22,9 @@ class MainActivity : AppCompatActivity() {
     var history : String = ""
     var currentResult : String = ""
 
+    var dotControl : Boolean = true
+    var butEqualsControl : Boolean = false
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         mainBinding = ActivityMainBinding.inflate(layoutInflater)
@@ -71,8 +74,13 @@ class MainActivity : AppCompatActivity() {
         }
         mainBinding.btnDel.setOnClickListener{
             number?.let {
-                number = it.substring(0,it.length-1)
-                mainBinding.textViewResult.text = number
+                if (it.length == 1) {
+                    onNumberACClicked()
+                } else {
+                    number = it.substring(0, it.length - 1)
+                    mainBinding.textViewResult.text = number
+                    dotControl = !number!!.contains(".")
+                }
             }
         }
         mainBinding.btnDivide.setOnClickListener{
@@ -93,6 +101,7 @@ class MainActivity : AppCompatActivity() {
             status = "division"
             operator = false
             number = null
+            dotControl = true
         }
         mainBinding.btnMulti.setOnClickListener{
             history = mainBinding.textViewHistory.text.toString()
@@ -112,6 +121,7 @@ class MainActivity : AppCompatActivity() {
             status =  "multiplication"
             operator = false
             number = null
+            dotControl = true
         }
         mainBinding.btnMinus.setOnClickListener{
             history = mainBinding.textViewHistory.text.toString()
@@ -131,6 +141,7 @@ class MainActivity : AppCompatActivity() {
             status = "subtraction"
             operator = false
             number = null
+            dotControl = true
         }
         mainBinding.btnPlus.setOnClickListener{
 
@@ -151,6 +162,7 @@ class MainActivity : AppCompatActivity() {
             status = "addition"
             operator = false
             number = null
+            dotControl = true
         }
         mainBinding.btnEquals.setOnClickListener{
             history = mainBinding.textViewHistory.text.toString()
@@ -168,16 +180,29 @@ class MainActivity : AppCompatActivity() {
                 mainBinding.textViewHistory.text = history.plus(currentResult).plus("=").plus(mainBinding.textViewResult.text.toString())
             }
             operator = false
+            dotControl = true
+            butEqualsControl = true
         }
         mainBinding.btnDot.setOnClickListener{
-            number = if(number == null){
-                "0."
-            }else{
-                "$number."
 
+            if(dotControl){
+                number = if(number == null){
+                    "0."
+                }else if(butEqualsControl){
+                        if(mainBinding.textViewResult.text.toString().contains(".")){
+                            mainBinding.textViewResult.text.toString()
+                        }else{
+                            mainBinding.textViewResult.text.toString().plus(".")
+                        }
+                }
+                else{
+                    "$number."
+
+                }
+                mainBinding.textViewResult.text = number
             }
-        mainBinding.textViewResult.text = number
-        }
+            dotControl = false
+            }
 
 
     }
@@ -189,18 +214,37 @@ class MainActivity : AppCompatActivity() {
         mainBinding.textViewHistory.text = ""
         firstNumber = 0.0
         lastNumber = 0.0
+        dotControl = true
+        butEqualsControl = false
 
     }
 
     fun onNumberClicked(clickedNumber : String){
+
      if (number == null){
          number = clickedNumber
-     }else {
+     }else if (butEqualsControl) {
+
+         number = if (dotControl) {
+             clickedNumber
+         } else {
+             mainBinding.textViewResult.text.toString().plus(clickedNumber)
+         }
+
+         firstNumber = number!!.toDouble()
+         lastNumber = 0.0
+         status = null
+         mainBinding.textViewHistory.text = ""
+     }
+         else{
          number += clickedNumber
      }
      mainBinding.textViewResult.text = number
-    operator = true
+     operator = true
+        butEqualsControl = false
+
     }
+
     fun plus(){
     lastNumber = mainBinding.textViewResult.text.toString().toDouble()
     firstNumber += lastNumber
